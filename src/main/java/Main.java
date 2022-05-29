@@ -24,6 +24,10 @@ public class Main {
         WebElement btnSearch= driver.findElement(By.xpath("//*[@id=\"searchKeywordsInput\"]"));
         btnSearch.sendKeys("iphone 13");
         btnSearch.sendKeys(Keys.ENTER);
+        driver.switchTo().frame("master-1").findElement(By.xpath("//*[@id=\"e1\"]/div/div[1]/div/div[2]/a")).click();
+
+        System.out.println(driver.getTitle());
+
 
     }
 }
